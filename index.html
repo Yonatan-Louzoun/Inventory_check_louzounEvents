@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ניהול מלאי אירועים</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <h1>✨ דאשבורד מלאי - עיצוב אירועים ✨</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="input-form">
+            <h2>הזנת פריט חדש / עדכון כמות</h2>
+            
+            <section class="category-management">
+                <h3>➕ ניהול קטגוריות</h3>
+                <div class="form-group category-input-group">
+                    <input type="text" id="new-category-name" placeholder="שם קטגוריה חדשה" required>
+                    <button type="button" id="add-category-btn" class="btn-add-category">הוסף קטגוריה</button>
+                </div>
+            </section>
+            
+            <hr> <form id="inventory-form">
+                <div class="form-group">
+                    <label for="item-name">שם הפריט:</label>
+                    <input type="text" id="item-name" required placeholder="לדוגמה: אגרטל זכוכית גבוה">
+                </div>
+                <div class="form-group">
+                    <label for="item-type">קטגוריה:</label>
+                    <select id="item-type" required>
+                        <option value="">בחר קטגוריה</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="item-quantity">כמות במלאי:</label>
+                    <input type="number" id="item-quantity" required min="0" value="0">
+                </div>
+                <button type="submit" class="btn-submit">שמור / עדכן פריט</button>
+            </form>
+        </section>
+
+        <section class="inventory-display">
+            <h2>📦 סיכום מלאי נוכחי</h2>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>שם פריט</th>
+                        <th>קטגוריה</th>
+                        <th>כמות</th>
+                        <th>פעולות</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+
+            <div id="summary-stats">
+                <h3>סה"כ פריטים שונים: <span id="total-items">0</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 מערכת ניהול מלאי</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
